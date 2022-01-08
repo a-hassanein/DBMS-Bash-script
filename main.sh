@@ -29,7 +29,7 @@ function mainMenu (){
 			 dbConnect=$(whiptail --title "Conect to DataBase" --inputbox "Enter your DataBase name to conect" 8 45 3>&1 1>&2 2>&3)
 			 echo $dbConnect
 			# cd $dbConnect
-			 . ./connectdb.sh
+			. ./connectdb.sh
 			;;
              
 
