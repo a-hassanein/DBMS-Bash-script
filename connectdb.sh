@@ -41,8 +41,8 @@ tableMenu=$(whiptail --title "Table Menu" --fb --menu "select options:" 17 60 0\
                                         ;;
                                 8)
                                         echo "Back to Main Menu"
-                                         whiptail --title "Main Menu" --msgbox "Your choose 2" 8 45
-					 . ../mainMenu
+					cd ..
+					 . ./main.sh
 					;;
 			esac
 

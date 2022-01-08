@@ -14,7 +14,8 @@ function mainMenu (){
 			echo "Create DataBase"
 			dbName=$(whiptail --title "Create DataBase" --inputbox "Enter your data base name to creat" 8 45 3>&1 1>&2 2>&3)
 			echo $dbName 
-			. ./createdb.sh 
+			. ./createdb.sh
+		        mainMenu	
 			;;
 
 
@@ -38,6 +39,7 @@ function mainMenu (){
                         dropName=$(whiptail --title "Drop DataBase" --inputbox "Enter your data base name to delete" 8 45 3>&1 1>&2 2>&3)
                         echo $dropName
                         . ./dropdb.sh
+			mainMenu
                         ;;
 
 
