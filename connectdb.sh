@@ -4,13 +4,13 @@
 #echo $dbConnect
 
 
-
   
   cd ./$dbConnect 2>>./.error.log
+  
   if [[ $? == 0 ]]; then
-    echo "Database $dbName was Successfully Selected"
-    
+    echo "Database $dbConnect was Successfully Selected"
+     
   else
-    echo "Database $dbName wasn't found"
+    echo "Database $dbConnect wasn't found"
     
   fi	
