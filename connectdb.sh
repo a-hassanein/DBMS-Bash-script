@@ -12,31 +12,33 @@ tableMenu=$(whiptail --title "Table Menu" --fb --menu "select options:" 17 60 0\
 
                         case $tableMenu in
                                 1)
-                                        echo "List DataBase"
-                                         whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
+                                        echo "Create Table"
+					tableName=$(whiptail --title "List DataBases" --inputbox "Enter Table Name" 8 45 3>&1 1>&2 2>&3)
+					echo $tableName
+					. ../createtable.sh
                                         ;;
                                 2)
-                                        echo "List DataBase"
+                                        echo "List Tables"
                                          whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
                                         ;;
                                 3)
-                                        echo "List DataBase"
+                                        echo "Drop Table"
                                          whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
                                         ;;
                                 4)
-                                        echo "List DataBase"
+                                        echo "Insert Into Table"
                                          whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
                                         ;;
                                 5)
-                                        echo "List DataBase"
+                                        echo "Select From Table"
                                          whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
                                         ;;
                                 6)
-                                        echo "List DataBase"
+                                        echo "Delete From Table"
                                          whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
                                         ;;
                                 7)
-                                        echo "List DataBase"
+                                        echo "Update Table"
                                          whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
                                         ;;
                                 8)
