@@ -21,8 +21,11 @@ function mainMenu (){
 
 		2)
                          echo "List & Number of  DataBases"
-                        whiptail --title "List DataBases" --msgbox "List of DataBases" 8 45
-			./listdb.sh
+			 databaselist=$(ls -d */)
+                         databaseNo=$(ls -d */ | cut -f1 -d"/" | wc -w)
+			whiptail --title "Number of DataBases" --msgbox "Number of DataBases is : $databaseNo" 8 45
+                        whiptail --title "List of DataBases" --msgbox "$databaselist" 45 45
+			mainMenu
                         ;;
 
 		3)

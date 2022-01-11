@@ -22,12 +22,12 @@ function datatypeMenu(){
 
 
 if [[ -f $tableName ]] ; then
-	whiptail --title "Error" --msgbox "This table is already exist" 8 45
+	whiptail --title "Create Table Message" --msgbox "This table $tableName is already exist" 8 45
 else
 	colNumber=$(whiptail --title "column Number" --inputbox "Enter column number" 8 45 3>&1 1>&2 2>&3)
 	touch $tableName
 	touch .$tableName
-	echo $colNumber >> $tableName
+	#echo $colNumber >> $tableName
 	echo "you are sucessfully created a table"
 
 	i=1
@@ -82,24 +82,23 @@ else
 		
 		  if [[ i -eq $colNumber ]]; then
 			    echo -n $colName >> $tableName;
+			    echo -n $colName$fasel$datatype$fasel$isPrimary >> .$tableName;
+
 		    else
 			      echo -n $colName$fasel >> $tableName;
-
+			      echo -n $colName$fasel$datatype$fasel$isPrimary$fasel >> .$tableName;
 		  fi
-        	 
-		echo -n $colName$fasel$datatype$fasel$isPrimary$fasel >> .$tableName;
-
-
 
         	((i++))
-		
 		isPrimary=""	
-
-	done
-	
+	done	
+	whiptail --title "Create table Message" --msgbox "You created $tableName sucessfully" 8 45
 fi
 
-cd .. 
-. ./connectdb.sh
-cd $dbName
+
+
+. ../tablemenu.sh
+
+
+
 
