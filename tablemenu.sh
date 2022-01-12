@@ -35,7 +35,8 @@ tableMenu=$(whiptail --title "Table Menu" --fb --menu "select options:" 17 60 0\
                                         ;;
                                 4)
                                         echo "Insert Into Table"
-                                         whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
+                                         . ../insertdata.sh
+					 tableMenu
                                         ;;
                                 5)
                                         echo "Select From Table"

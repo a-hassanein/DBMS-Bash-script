@@ -82,11 +82,11 @@ else
 		
 		  if [[ i -eq $colNumber ]]; then
 			    echo -n $colName >> $tableName;
-			    echo -n $colName$fasel$datatype$fasel$isPrimary >> .$tableName;
+			    echo  $colName$fasel$datatype$fasel$isPrimary >> .$tableName;
 
 		    else
 			      echo -n $colName$fasel >> $tableName;
-			      echo -n $colName$fasel$datatype$fasel$isPrimary$fasel >> .$tableName;
+			      echo  $colName$fasel$datatype$fasel$isPrimary$fasel >> .$tableName;
 		  fi
 
         	((i++))
