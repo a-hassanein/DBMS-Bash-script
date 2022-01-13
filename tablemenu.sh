@@ -40,7 +40,7 @@ tableMenu=$(whiptail --title "Table Menu" --fb --menu "select options:" 17 60 0\
                                         ;;
                                 5)
                                         echo "Select From Table"
-                                         whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
+                                         . ../selectmenu.sh
                                         ;;
                                 6)
                                         echo "Delete From Table"
