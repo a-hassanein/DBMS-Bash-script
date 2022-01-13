@@ -81,7 +81,7 @@ else
 		
 		
 		  if [[ i -eq $colNumber ]]; then
-			    echo -n $colName >> $tableName;
+			    echo  $colName >> $tableName;
 			    echo  $colName$fasel$datatype$fasel$isPrimary >> .$tableName;
 
 		    else
