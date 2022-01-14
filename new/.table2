@@ -1,1 +1,5 @@
-id:int:PK:name:str::bitrhdate:str::single:boolean::
+id:int:PK:
+name:str::
+email:str::
+ismarrid:boolean::
+phone:str:

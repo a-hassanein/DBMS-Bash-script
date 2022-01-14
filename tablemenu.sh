@@ -44,11 +44,11 @@ tableMenu=$(whiptail --title "Table Menu" --fb --menu "select options:" 17 60 0\
                                         ;;
                                 6)
                                         echo "Delete From Table"
-                                         whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
+                                         . ../deleterecord.sh
                                         ;;
                                 7)
                                         echo "Update Table"
-                                         whiptail --title "List DataBases" --msgbox "Your choose 2" 8 45
+                                         . ../updatetable.sh
                                         ;;
                                 8)
                                         echo "Back to Main Menu"

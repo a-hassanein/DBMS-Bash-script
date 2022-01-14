@@ -38,7 +38,7 @@ selectMenu=$(whiptail --title "Select Menu" --fb --menu "select options:" 17 60 
                                                 colname=$(whiptail --title "Table Records"  --inputbox "Enter Column Name" 8 45 3>&1 1>&2 2>&3)
 						checkcolumnfound=$(awk 'BEGIN{FS=":"}{if(NR==1){for(i=1;i<=NF;i++){if($i=="'$colname'") print i}}}' $tableName)
 						
-						if [[ checkcolumnfound == "" ]]; then
+						if [[ $checkcolumnfound == "" ]]; then
 						
 							whiptail --title "Error Message" --msgbox "Column doesn't exist" 8 45
 

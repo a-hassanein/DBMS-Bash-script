@@ -3,6 +3,7 @@
 if [[ -f $droptable ]]; then
 
 	rm $droptable
+	rm .$droptable
 	whiptail --title "Delete table Message" --msgbox "You deleted $droptable sucessfully" 8 45
 	#echo "You deleted $droptable sucessfully"
 else
