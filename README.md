@@ -26,6 +26,7 @@ The Application will be GUI Menu based app , that will provide to user this Menu
 
 # Instruction to run the application:
 Run this command in terminal in clone path :
+<br>
 . ./main.sh
 
 # Example from Application running
