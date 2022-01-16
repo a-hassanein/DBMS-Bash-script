@@ -24,6 +24,10 @@ The Application will be GUI Menu based app , that will provide to user this Menu
 - Update Table
 - Back to Main menu
 
+# Instruction to run the application:
+Run this command in terminal in clone path :
+. ./main.sh
+
 # Example from Application running
 ![image](run.png?raw=true)
 
