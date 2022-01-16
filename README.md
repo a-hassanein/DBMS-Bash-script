@@ -15,8 +15,7 @@ The Application will be GUI Menu based app , that will provide to user this Menu
 - Drop Table
 - Insert into Table
 - Select From Table
-</br>
-    <b><h3>Select Menu:</h3></b>
+    <h3>Select Menu:</h3>
     - Select All Columns
     - Select Specific Column
     - Select All Column with Where condition
