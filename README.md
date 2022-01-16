@@ -15,12 +15,14 @@ The Application will be GUI Menu based app , that will provide to user this Menu
 - Drop Table
 - Insert into Table
 - Select From Table
-    <b>Select Menu:</b>
+</br>
+    <b><h3>Select Menu:</h3></b>
     - Select All Columns
     - Select Specific Column
     - Select All Column with Where condition
     - Back to Table menu
     - Back to Main menu
+
 - Delete From Table
 - Update Table
 - Back to Main menu
