@@ -18,7 +18,10 @@ tableName=$(whiptail --title "Table Name" --inputbox "Enter Table Name" 8 45 3>&
                                                 else
                                                         condvalue=$(whiptail --title "Column Record" --inputbox "Enter Your condition Value" 8 45 3>&1 1>&2 2>&3)
                                                         condrecordNo=$(awk 'BEGIN{FS=":"}{if ($'$checkcolumnfound'=="'$condvalue'") print $'$checkcolumnfound'}' $tableName)
-
+							recordNo=$(awk 'BEGIN{FS=":"}{if ($'$checkcolumnfound'=="'$condvalue'") print NR}' $tableName)
+						 if [[ $condrecordNo == "" ]]; then
+							 whiptail --title "Error Message" --msgbox "This value dosen't Exist" 8 45
+						 else
 							if [[ $recordNo == 1 ]] ; then
                                                                 whiptail --title "Error Message" --msgbox "This record can't be delete" 8 45
 								. ../tablemenu.sh
@@ -33,7 +36,7 @@ tableName=$(whiptail --title "Table Name" --inputbox "Enter Table Name" 8 45 3>&
 
 								else
 									newrecord=$(whiptail --title "Field Name" --inputbox "Enter new record" 8 45 3>&1 1>&2 2>&3)
-									recordNo=$(awk 'BEGIN{FS=":"}{if ($'$checkcolumnfound'=="'$condvalue'") print NR}' $tableName)
+									#recordNo=$(awk 'BEGIN{FS=":"}{if ($'$checkcolumnfound'=="'$condvalue'") print NR}' $tableName)
 									oldrecord=$(awk 'BEGIN{FS=":"}{if(NR=='$recordNo'){for(i=1;i<=NF;i++){if(i=='$checkfieldfound') print $i}}}' $tableName)
                                                                 	sed -i ''$recordNo's/'$oldrecord'/'$newrecord'/g' $tableName
                                                                 	whiptail --title "Record" --msgbox "record updated sucessfully" 8 45
@@ -41,6 +44,7 @@ tableName=$(whiptail --title "Table Name" --inputbox "Enter Table Name" 8 45 3>&
 								fi
                                                         fi
                                                 fi
+						fi
 
                                                 . ../tablemenu.sh
                                         fi

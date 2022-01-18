@@ -27,7 +27,7 @@ The Application will be GUI Menu based app , that will provide to user this Menu
 # Example from Application running
 ![image](run.png?raw=true)
 
-# 7-Author
+# Authors
 -[Ahmed Hassanein](https://github.com/a-hassanein/).
 -[Abd ElRahman](https://github.com/abdelrahmanelsese1).
 

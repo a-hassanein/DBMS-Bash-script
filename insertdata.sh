@@ -63,7 +63,7 @@ for (( i=1 ; i <= $checkcolsno ; i++ )); do
 
 				whiptail --title "Error Message" --msgbox "Primary key can't be duplicated" 8 45
 
-			        
+			   echo $record     
 
 			else
 				break;
