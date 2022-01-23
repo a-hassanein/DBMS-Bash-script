@@ -3,7 +3,7 @@
 # Project Features:
 The Application will be GUI Menu based app , that will provide to user this Menu items:
 
-# Main Menu:
+## Main Menu:
 - Create Database
 - List Databases
 - Connect To Databases
