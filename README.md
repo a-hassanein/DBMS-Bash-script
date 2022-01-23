@@ -9,7 +9,7 @@ The Application will be GUI Menu based app , that will provide to user this Menu
 - Connect To Databases
 - Drop Database
 
-# Table Menu:
+## Table Menu:
 - Create Table 
 - List Tables
 - Drop Table
